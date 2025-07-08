@@ -1,110 +1,158 @@
+
+:root {
+  --azul-oscuro: #1417ae;
+  --azul-claro: #4a90e2;
+  --verde-futbol: #4caf50;
+  --blanco: #ffffff;
+  --gris-suave: #f5f5f5;
+  --gris-texto: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--gris-suave);
+  color: var(--gris-texto);
+  scroll-behavior: smooth;
+}
+body {
+    background-image: url('/img/bannerLigas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--azul-oscuro), var(--azul-claro));
+  color: var(--blanco);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--verde-futbol);
+}
+
+.btn-descargar {
+  background-color: var(--verde-futbol);
+  color: var(--blanco);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-descargar:hover {
+  background-color: #388e3c;
+}
+
+section {
+  padding: 3rem 2rem;
+  background-color: var(--blanco);
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--azul-oscuro);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.columnas-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tarjeta {
+  background-color: var(--gris-suave);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 230px;
+  text-align: center;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  text-align: center;
+}
+
+footer div {
+  flex: 1 1 300px;
+  margin: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
 .hidden {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(40px);
 }
 
 .visible {
   opacity: 1;
   transform: translateY(0);
 }
-:root {
-      --azul-oscuro: #1417ae;
-      --azul-claro: #4a90e2;
-      --verde-futbol: #4caf50;
-      --blanco: #ffffff;
-    }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--blanco);
-      color: var(--azul-oscuro);
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--azul-oscuro);
-      color: var(--blanco);
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--blanco);
-      font-weight: bold;
-    }
-
-    .btn-descargar {
-      background-color: var(--azul-claro);
-      color: var(--blanco);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    section {
-      padding: 2rem;
-      border-bottom: 1px solid #dddddd;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .imagen-placeholder {
-      background-color: #eee;
-      width: 100%;
-      max-width: 400px;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #ccc;
-      font-weight: bold;
-      color: #666;
-    }
-
-    .columnas-3 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .tarjeta {
-      background-color: #f1f1f9;
-      border-radius: 8px;
-      padding: 1rem;
-      width: 220px;
-      text-align: center;
-    }
-
-    footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 2rem;
-      background-color: var(--azul-oscuro);
-      color: var(--blanco);
-    }
-
-    @media (max-width: 768px) {
-      .flex, .columnas-3, footer {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+@media (max-width: 768px) {
+  .flex, .columnas-3, footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

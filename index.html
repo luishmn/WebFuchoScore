@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,9 @@
 <body>
   <header>
     <img src="/img/FuchoScore.png" alt="Logo FuchoScore" style="height:60px;">
-    <h1>FuchoScore</h1>
+    <h1 style="font-size: 3rem; font-weight: bold; color: #f4f4f4; letter-spacing: 2px; margin: 0 1rem;">
+      FuchoScore
+    </h1>
     <nav>
       <a href="#ligas">Ligas</a>
       <a href="#planes">Planes</a>
@@ -22,37 +25,47 @@
   </header>
 
   <section>
-    <p style="font-size: 18px; font-weight: bold; text-align: center; max-width: 800px; margin: auto;">
-      ¡Bienvenido al futuro del análisis futbolístico! En nuestra app, transformamos la forma en que vives cada partido, ofreciéndote resultados en tiempo real y estadísticas detalladas de las ligas más grandes del mundo. Prepárate para sumergirte en un universo de datos que te hará ver el juego con otros ojos y te convertirá en un verdadero experto.
-    </p>
-    <div class="flex" style="margin-top: 2rem;">
-      <img src="/img/Diseños Fucho Score.jpg" alt="Diseño App" style="max-width:700px;">
-      <img src="/img/haaland.jpg" alt="Erling Haaland" style="max-width:600px;">
+    <div class="flex" style="align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <div style="flex:1; min-width:250px;">
+        <p style="font-size: 18px; font-weight: 500; text-align: left; max-width: 800px; margin: auto;">
+          <strong>¡Bienvenido al futuro del análisis futbolístico!</strong><br>
+          En FuchoScore reinventamos la forma en que sigues tus partidos favoritos. Nuestra aplicación va más allá de los resultados, ofreciéndote una experiencia de análisis profundo con datos avanzados como goles esperados (xG), mapas de calor, eficiencia de pases y más.<br><br>
+          Ya seas un aficionado apasionado, un periodista deportivo o un analista táctico, FuchoScore pone a tu alcance herramientas poderosas para interpretar el juego desde una nueva perspectiva. ¡Descubre estadísticas en tiempo real, comparativas entre jugadores y equipos, y mantente siempre un paso adelante!
+        </p>
+      </div>
+      <div style="flex:1; min-width:250px; display:flex; justify-content:center;">
+        <img src="/img/Diseños Fucho Score.jpg" alt="Diseño App" style="max-width:600px; width:150%; border-radius:8px;">
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; margin-top:2rem;">
+      <br>
+      <img src="/img/bannerPromocion.png" alt="Erling Haaland" style="max-width:1000px; width:200%; border-radius:8px;">
     </div>
   </section>
 
   <section id="ligas">
-    <h2>Ligas</h2>
-    <p style="text-align:center; max-width:900px; margin:0 auto;">
-      Sumérgete en el corazón del fútbol mundial con nuestra aplicación. No solo verás los resultados, sino que podrás explorar un universo de estadísticas detalladas, análisis en tiempo real y datos históricos que te permitirán comprender cada partido como nunca antes.
-    </p>
-    <div class="flex" style="margin-top:2rem;">
-      <img src="/img/banner-premier.png" alt="Premier League" style="max-width:700px;">
-      <div>
-        <h2>Premier League</h2>
-        <p style="max-width: 700px; text-align: justify;">
-          Accede a resultados en tiempo real, estadísticas avanzadas (xG, asistencias, pases clave, mapas de calor), alineaciones y el calendario completo para seguir a tus favoritos.
-        </p>
+    <h2 style="text-align:center;">Ligas</h2>
+    <div class="ligas-grid" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+      <div class="liga-card" style="flex:1 1 350px; max-width:600px; min-width:250px; display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:10px; box-shadow:0 2px 8px #0001; padding:1.5rem;">
+        <img src="/img/banner-premier.png" alt="Premier League" style="max-width:100%; border-radius:8px;">
+        <h3 style="margin-top:1rem;">Premier League</h3>
+        <ul style="text-align:left;">
+          <li>Resultados minuto a minuto y notificaciones en tiempo real.</li>
+          <li>Estadísticas avanzadas: xG, tiros al arco, posesión, precisión de pases y más.</li>
+          <li>Desglose táctico de los equipos y rendimiento individual de jugadores.</li>
+        </ul>
+        <p style="margin-top:0.5rem;">Desde el derbi de Manchester hasta una sorpresiva remontada del Brentford, no te pierdas ningún detalle.</p>
       </div>
-    </div>
-    <div class="flex" style="margin-top:2rem;">
-      <div>
-        <h2>UEFA Champions League</h2>
-        <p style="max-width: 700px; text-align: justify;">
-          Vive la emoción de la máxima competición de clubes de Europa. Obtén actualizaciones en tiempo real, estadísticas de rendimiento, historial de enfrentamientos y análisis profundos de cada partido.
-        </p>
+      <div class="liga-card" style="flex:1 1 350px; max-width:600px; min-width:250px; display:flex; flex-direction:column; align-items:center; background:#fff; border-radius:10px; box-shadow:0 2px 8px #0001; padding:1.5rem;">
+        <img src="/img/banner-champions.jpg" alt="Champions League" style="max-width:100%; border-radius:8px;">
+        <h3 style="margin-top:1rem;">UEFA Champions League</h3>
+        <ul style="text-align:left;">
+          <li>Seguimiento en vivo de todos los partidos desde la fase de grupos hasta la final.</li>
+          <li>Análisis táctico con mapas de calor, zonas de presión y rendimiento físico de los jugadores.</li>
+          <li>Comparativas entre clubes europeos históricamente y en la temporada actual.</li>
+        </ul>
+        <p style="margin-top:0.5rem;">¿Quieres saber quién domina realmente el mediocampo en Europa? FuchoScore te lo muestra.</p>
       </div>
-      <img src="/img/banner-champions.jpg" alt="Champions League" style="max-width:700px;">
     </div>
   </section>
 
@@ -60,15 +73,15 @@
     <h2>Beneficios</h2>
     <div class="columnas-3">
       <div class="tarjeta">
-        <img src="/img/grafico-de-barras.png" alt="Estadísticas" style="width:80px;">
+        <img src="/img/grafico-de-barras.png" alt="Estadísticas">
         <p>Estadísticas precisas</p>
       </div>
       <div class="tarjeta">
-        <img src="/img/hora.png" alt="Tiempo real" style="width:80px;">
+        <img src="/img/hora.png" alt="Tiempo real">
         <p>Actualización en tiempo real</p>
       </div>
       <div class="tarjeta">
-        <img src="/img/competencia.png" alt="Comparación" style="width:80px;">
+        <img src="/img/competencia.png" alt="Comparación">
         <p>Comparación entre equipos</p>
       </div>
     </div>
@@ -78,28 +91,28 @@
     <h2>Planes</h2>
     <div class="columnas-3">
       <div class="tarjeta">
-        <img src="/img/sin-dinero.png" alt="Gratis" style="width:80px;">
+        <img src="/img/sin-dinero.png" alt="Gratis">
         <h3>Gratis</h3>
-        <p>Accede a estadísticas básicas y seguimiento de un equipo.</p>
+        <p>Estadísticas básicas y seguimiento de un equipo.</p>
         <strong>$0.00 /Mes</strong>
       </div>
       <div class="tarjeta">
-        <img src="/img/alta-calidad.png" alt="Pro" style="width:80px;">
+        <img src="/img/alta-calidad.png" alt="Pro">
         <h3>Pro</h3>
         <p>Comparativas, análisis y sin publicidad.</p>
         <strong>$95.00 /Mes</strong>
       </div>
       <div class="tarjeta">
-        <img src="/img/prima.png" alt="Elite" style="width:80px;">
+        <img src="/img/prima.png" alt="Elite">
         <h3>Elite</h3>
-        <p>Todo lo anterior + alertas personalizadas y reportes.</p>
+        <p>Todo lo anterior + alertas y reportes.</p>
         <strong>$175.00 /Mes</strong>
       </div>
     </div>
   </section>
 
   <section style="padding:0;">
-    <img src="/img/bannerTeam.jpg" alt="Equipo" style="width:100%; height:auto; border-radius:0; margin:0;">
+    <img src="/img/bannerTeam.jpg" alt="Equipo" style="width:100%; height:auto; border-radius:0;">
   </section>
 
   <footer id="nosotros">
