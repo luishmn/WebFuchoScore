@@ -1,117 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FuchoScore</title>
   <link rel="icon" type="image/png" href="/img/FuchoScore.png">
-  <style>
-    :root {
-      --azul-oscuro: #1417ae;
-      --azul-claro: #4a90e2;
-      --verde-futbol: #4caf50;
-      --blanco: #ffffff;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--blanco);
-      color: var(--azul-oscuro);
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--azul-oscuro);
-      color: var(--blanco);
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--blanco);
-      font-weight: bold;
-    }
-
-    .btn-descargar {
-      background-color: var(--azul-claro);
-      color: var(--blanco);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    section {
-      padding: 2rem;
-      border-bottom: 1px solid #dddddd;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .imagen-placeholder {
-      background-color: #eee;
-      width: 100%;
-      max-width: 400px;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #ccc;
-      font-weight: bold;
-      color: #666;
-    }
-
-    .columnas-3 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .tarjeta {
-      background-color: #f1f1f9;
-      border-radius: 8px;
-      padding: 1rem;
-      width: 220px;
-      text-align: center;
-    }
-
-    footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 2rem;
-      background-color: var(--azul-oscuro);
-      color: var(--blanco);
-    }
-
-    @media (max-width: 768px) {
-      .flex, .columnas-3, footer {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="/img/FuchoScore.png" alt="Logo FuchoScore" style="height:80px; margin-right:12px;">
-    <div><h1>FuchoScore</h1></div>
+    <img src="/img/FuchoScore.png" alt="Logo FuchoScore" style="height:60px;">
+    <h1>FuchoScore</h1>
     <nav>
       <a href="#ligas">Ligas</a>
       <a href="#planes">Planes</a>
@@ -123,65 +22,37 @@
   </header>
 
   <section>
-    <div class="flex" style="align-items: center;">
-      <div style="flex:1; display: flex; flex-direction: column; justify-content: center;"></div>
-      <!--
-        <h2>Mensaje</h2>
-      -->  
-        <p style="font-size: 18px; font-weight: bold; color: var(black); text-align: center; margin-bottom: 1.5rem; text-shadow: 1px 1px 8px #0b1e3f33;">
-          ¡Bienvenido al futuro del análisis futbolístico! En nuestra app, transformamos 
-          la forma en que vives cada partido, ofreciéndote resultados en tiempo real 
-          y estadísticas detalladas de las ligas más grandes del mundo. Prepárate 
-          para sumergirte en un universo de datos que te hará ver el juego con otros 
-          ojos y te convertirá en un verdadero experto. 
-        </p>
-      </div>
-      <div style="order:2;"></div>
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-          <img src="/img/Diseños Fucho Score.jpg" alt="Apartados App" style="width:100%; max-width:800px; height:400px; object-fit:cover; border-radius:8px; border:1px solid #ccc;">
-          <img src="/img/haaland.jpg" alt="Erling Haaland" style="width:100%; max-width:800px; height:400px; object-fit:cover; border-radius:8px; border:1px solid #ccc;">
-        </div>
-      </div>
+    <p style="font-size: 18px; font-weight: bold; text-align: center; max-width: 800px; margin: auto;">
+      ¡Bienvenido al futuro del análisis futbolístico! En nuestra app, transformamos la forma en que vives cada partido, ofreciéndote resultados en tiempo real y estadísticas detalladas de las ligas más grandes del mundo. Prepárate para sumergirte en un universo de datos que te hará ver el juego con otros ojos y te convertirá en un verdadero experto.
+    </p>
+    <div class="flex" style="margin-top: 2rem;">
+      <img src="/img/Diseños Fucho Score.jpg" alt="Diseño App" style="max-width:700px;">
+      <img src="/img/haaland.jpg" alt="Erling Haaland" style="max-width:600px;">
     </div>
   </section>
 
   <section id="ligas">
     <h2>Ligas</h2>
-    <p style="max-width: 900px; margin: 0 auto; text-align: center;"></p>
-      Sumérgete en el corazón del fútbol mundial con nuestra aplicación. En esta sección, 
-      te ofrecemos una ventana directa a las competiciones más prestigiosas y emocionantes del planeta. 
-      No solo verás los resultados, sino que podrás explorar un universo de estadísticas detalladas, 
-      análisis en tiempo real y datos históricos que te permitirán comprender cada partido como nunca antes. 
-      Desde la intensidad de las ligas domésticas hasta el brillo de las competiciones continentales, 
-      nuestra app es tu herramienta definitiva para vivir el fútbol con una profundidad sin precedentes. 
-      ¡Prepárate para llevar tu pasión al siguiente nivel!
+    <p style="text-align:center; max-width:900px; margin:0 auto;">
+      Sumérgete en el corazón del fútbol mundial con nuestra aplicación. No solo verás los resultados, sino que podrás explorar un universo de estadísticas detalladas, análisis en tiempo real y datos históricos que te permitirán comprender cada partido como nunca antes.
     </p>
-    <div class="flex">
-      <img src="/img/banner-premier.png" alt="Premier League" style="width:100%; max-width:700px; height:350px; object-fit:cover; border-radius:8px; border:1px solid #ccc;">
-      
+    <div class="flex" style="margin-top:2rem;">
+      <img src="/img/banner-premier.png" alt="Premier League" style="max-width:700px;">
       <div>
-        <h3>Premier League</h3>
-        <p style="max-width: 500px; text-align: justify;">
-          Descubre por qué la Premier League es considerada la liga más vibrante y competitiva del mundo.<br><br>
-          Con nuestra aplicación, no te perderás ni un solo detalle de la acción en Inglaterra. Accede a resultados en tiempo real, estadísticas avanzadas de cada equipo y jugador (goles esperados xG, asistencias, pases clave, mapas de calor), alineaciones al instante y el calendario completo para seguir a tus favoritos.<br><br>
-          Desde la carrera por el título hasta la lucha por la permanencia, nuestra app te proporciona todos los datos necesarios para analizar cada partido y cada movimiento en la liga que nunca descansa.
+        <h2>Premier League</h2>
+        <p style="max-width: 700px; text-align: justify;">
+          Accede a resultados en tiempo real, estadísticas avanzadas (xG, asistencias, pases clave, mapas de calor), alineaciones y el calendario completo para seguir a tus favoritos.
         </p>
       </div>
     </div>
-    <div class="flex">
+    <div class="flex" style="margin-top:2rem;">
       <div>
-        <h3>UEFA Champions League</h3>
-        <p style="max-width: 500px; text-align: justify;">
-          Vive la emoción de la máxima competición de clubes de Europa con nuestra app. La UEFA Champions 
-          League es el escenario donde los gigantes se enfrentan y las leyendas nacen, y nosotros te 
-          acercamos cada instante. Obtén actualizaciones en tiempo real de todos los partidos, explora 
-          estadísticas exclusivas de rendimiento de jugadores y equipos en las noches europeas, sigue el 
-          progreso de tu club favorito desde la fase de grupos hasta la gran final, y revisa el 
-          historial de enfrentamientos. Prepárate para dominar cada dato de la Champions y sorprenderte 
-          con análisis que te harán un experto en la competición más prestigiosa del fútbol de clubes.</p>
+        <h2>UEFA Champions League</h2>
+        <p style="max-width: 700px; text-align: justify;">
+          Vive la emoción de la máxima competición de clubes de Europa. Obtén actualizaciones en tiempo real, estadísticas de rendimiento, historial de enfrentamientos y análisis profundos de cada partido.
+        </p>
       </div>
-      <img src="/img/banner-champions.jpg" alt="Champions League" style="width:50%; max-width:700; height:350px; object-fit:cover; border-radius:8px; border:1px solid #ccc;">
-      
+      <img src="/img/banner-champions.jpg" alt="Champions League" style="max-width:700px;">
     </div>
   </section>
 
@@ -189,24 +60,17 @@
     <h2>Beneficios</h2>
     <div class="columnas-3">
       <div class="tarjeta">
-        <div>
-          <img src="/img/grafico-de-barras.png" alt="Estadísticas precisas" style="width:80px; height:80px; display:block; margin:0 auto 10px;">
-        </div>
-        Estadísticas precisas
+        <img src="/img/grafico-de-barras.png" alt="Estadísticas" style="width:80px;">
+        <p>Estadísticas precisas</p>
       </div>
       <div class="tarjeta">
-        <div>
-          <img src="/img/hora.png" alt="Actualización en tiempo real" style="width:80px; height:80px; display:block; margin:0 auto 10px;">
-        </div>
-        Actualización en tiempo real
+        <img src="/img/hora.png" alt="Tiempo real" style="width:80px;">
+        <p>Actualización en tiempo real</p>
       </div>
       <div class="tarjeta">
-        <div>
-          <img src="/img/competencia.png" alt="Comparación entre equipos" style="width:80px; height:80px; display:block; margin:0 auto 10px;">
-        </div>
-        Comparación entre equipos
+        <img src="/img/competencia.png" alt="Comparación" style="width:80px;">
+        <p>Comparación entre equipos</p>
       </div>
-      <img src="/img/Diseños Fucho Score.jpg" alt="Apartados App" style="width:100%; max-width:800px; height:400px; object-fit:cover; border-radius:8px; border:1px solid #ccc;">
     </div>
   </section>
 
@@ -214,45 +78,41 @@
     <h2>Planes</h2>
     <div class="columnas-3">
       <div class="tarjeta">
-        <div>
-          <img src="/img/sin-dinero.png" alt="Plan Gratis" style="width:80px; height:80px; display:block; margin:0 auto 10px;">
-        </div>
-        <h2>Gratis</h2>
+        <img src="/img/sin-dinero.png" alt="Gratis" style="width:80px;">
+        <h3>Gratis</h3>
         <p>Accede a estadísticas básicas y seguimiento de un equipo.</p>
-        <h2>$0.00 /Mes</h2>
+        <strong>$0.00 /Mes</strong>
       </div>
       <div class="tarjeta">
-        <div>
-          <img src="/img/alta-calidad.png" alt="Plan Pro" style="width:80px; height:80px; display:block; margin:0 auto 10px;">
-        </div>
-        <h2>Pro</h2>
+        <img src="/img/alta-calidad.png" alt="Pro" style="width:80px;">
+        <h3>Pro</h3>
         <p>Comparativas, análisis y sin publicidad.</p>
-        <h2>$95.00 /Mes</h2>
+        <strong>$95.00 /Mes</strong>
       </div>
       <div class="tarjeta">
-        <div>
-          <img src="/img/prima.png" alt="Plan Elite" style="width:80px; height:80px; display:block; margin:0 auto 10px;">
-        </div>
-        <h2>Elite</h2>
+        <img src="/img/prima.png" alt="Elite" style="width:80px;">
+        <h3>Elite</h3>
         <p>Todo lo anterior + alertas personalizadas y reportes.</p>
-        <h2>$175.00 /Mes</h2>
+        <strong>$175.00 /Mes</strong>
       </div>
     </div>
   </section>
 
-  <section style="padding:0; margin:0;"></section>
-    <img src="/img/bannerTeam.jpg" alt="Banner Team" style="width:100vw; max-width:100vw; height:400px; object-fit:cover; border-radius:0; border:none; display:block; margin:0; padding:0;">
+  <section style="padding:0;">
+    <img src="/img/bannerTeam.jpg" alt="Equipo" style="width:100%; height:auto; border-radius:0; margin:0;">
   </section>
 
   <footer id="nosotros">
     <div>
-      <h3>Final</h3>
-      <p>FuchoScore es tu aliado para seguir el fútbol con la precisión y pasión que se merece.</p>
+      <h3>FuchoScore</h3>
+      <p>Tu aliado para seguir el fútbol con precisión y pasión.</p>
     </div>
     <div>
       <h3>Redes</h3>
-      <p>Síguenos en nuestras redes sociales para más contenido futbolero, estadísticas y noticias al instante.</p>
+      <p>Síguenos en nuestras redes sociales para más contenido futbolero.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,110 @@
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+:root {
+      --azul-oscuro: #1417ae;
+      --azul-claro: #4a90e2;
+      --verde-futbol: #4caf50;
+      --blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--blanco);
+      color: var(--azul-oscuro);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--blanco);
+      font-weight: bold;
+    }
+
+    .btn-descargar {
+      background-color: var(--azul-claro);
+      color: var(--blanco);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .imagen-placeholder {
+      background-color: #eee;
+      width: 100%;
+      max-width: 400px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      color: #666;
+    }
+
+    .columnas-3 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .tarjeta {
+      background-color: #f1f1f9;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 220px;
+      text-align: center;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+    }
+
+    @media (max-width: 768px) {
+      .flex, .columnas-3, footer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
