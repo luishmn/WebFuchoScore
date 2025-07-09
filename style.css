@@ -1,4 +1,3 @@
-
 :root {
   --azul-oscuro: #1417ae;
   --azul-claro: #4a90e2;
@@ -20,12 +19,12 @@ body {
   scroll-behavior: smooth;
 }
 body {
-    background-image: url('/img/bannerLigas.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
+  background-image: url('/img/bannerLigas.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -155,4 +154,44 @@ img {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Estilos para el contenedor del video y la imagen (NUEVOS ESTILOS) */
+.video-container {
+  position: relative; /* Necesario para posicionar el iframe absolutamente */
+  width: 100%; /* Ocupa todo el ancho disponible en su padre */
+  padding-top: 56.25%; /* Relación de aspecto 16:9 (altura / ancho * 100). Ajusta si tus videos tienen otra relación. */
+  overflow: hidden; /* Oculta cualquier parte del video que se salga */
+  border-radius: 8px; /* Mantiene el border-radius de las imágenes originales */
+  background-color: #000; /* Fondo negro mientras carga o si no hay video */
+}
+
+.video-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  transition: opacity 0.3s ease; /* Transición suave para la imagen */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Elimina el borde del iframe */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Transición suave para el video */
+}
+
+/* Cuando el video está activo */
+.video-container.active img {
+  opacity: 0; /* Oculta la imagen */
+}
+
+.video-container.active iframe {
+  opacity: 1; /* Muestra el video */
 }
