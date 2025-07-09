@@ -156,47 +156,33 @@ img {
   }
 }
 
-/* --- NUEVOS/ACTUALIZADOS ESTILOS PARA EL CONTENEDOR DEL VIDEO --- */
+/* --- ESTILOS PARA VIDEOS Y IMAGENES FIJAS DENTRO DE LAS TARJETAS DE LIGA --- */
 
-.video-container {
+.video-responsive {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* Relación de aspecto 16:9 */
+  width: 100%; /* Ocupa el ancho completo de la tarjeta */
+  padding-top: 56.25%; /* Esto crea una proporción 16:9 para el video */
+  height: 0; /* Necesario para que padding-top funcione para la altura */
   overflow: hidden;
-  border-radius: 8px;
-  background-color: #000;
-  cursor: pointer;
+  margin-bottom: 1rem; /* Espacio entre el video y la imagen/texto */
+  border-radius: 8px; /* Mantiene bordes redondeados */
 }
 
-.video-thumbnail {
+.video-responsive .local-video { /* Estilo para la etiqueta <video> dentro de .video-responsive */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-  display: block;
-}
-
-.youtube-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra el área sin distorsión */
   border: none;
-  opacity: 0;
-  pointer-events: none; /* No permite clics cuando está oculto */
-  transition: opacity 0.3s ease;
 }
 
-/* Cuando el video-container tiene la clase 'active' (al pasar el ratón) */
-.video-container.active .video-thumbnail {
-  opacity: 0; /* Oculta la imagen */
-}
-
-.video-container.active .youtube-iframe {
-  opacity: 1; /* Muestra el iframe del video */
-  pointer-events: auto; /* Habilita los clics en el iframe */
+.liga-image-static {
+  width: 100%; /* La imagen ocupa el ancho completo */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina espacio extra debajo de la imagen */
+  margin-bottom: 1rem; /* Espacio entre la imagen y el título/descripción */
+  border-radius: 8px; /* Mantiene bordes redondeados */
+  border: 1px solid #eee; /* Un borde sutil si lo deseas */
 }
