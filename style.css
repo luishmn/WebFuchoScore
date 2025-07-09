@@ -156,42 +156,47 @@ img {
   }
 }
 
-/* Estilos para el contenedor del video y la imagen (NUEVOS ESTILOS) */
+/* --- NUEVOS/ACTUALIZADOS ESTILOS PARA EL CONTENEDOR DEL VIDEO --- */
+
 .video-container {
-  position: relative; /* Necesario para posicionar el iframe absolutamente */
-  width: 100%; /* Ocupa todo el ancho disponible en su padre */
-  padding-top: 56.25%; /* Relación de aspecto 16:9 (altura / ancho * 100). Ajusta si tus videos tienen otra relación. */
-  overflow: hidden; /* Oculta cualquier parte del video que se salga */
-  border-radius: 8px; /* Mantiene el border-radius de las imágenes originales */
-  background-color: #000; /* Fondo negro mientras carga o si no hay video */
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Relación de aspecto 16:9 */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+  cursor: pointer;
 }
 
-.video-container img {
+.video-thumbnail {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
-  transition: opacity 0.3s ease; /* Transición suave para la imagen */
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  display: block;
 }
 
-.video-container iframe {
+.youtube-iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none; /* Elimina el borde del iframe */
-  opacity: 0; /* Inicialmente oculto */
-  transition: opacity 0.3s ease; /* Transición suave para el video */
+  border: none;
+  opacity: 0;
+  pointer-events: none; /* No permite clics cuando está oculto */
+  transition: opacity 0.3s ease;
 }
 
-/* Cuando el video está activo */
-.video-container.active img {
+/* Cuando el video-container tiene la clase 'active' (al pasar el ratón) */
+.video-container.active .video-thumbnail {
   opacity: 0; /* Oculta la imagen */
 }
 
-.video-container.active iframe {
-  opacity: 1; /* Muestra el video */
+.video-container.active .youtube-iframe {
+  opacity: 1; /* Muestra el iframe del video */
+  pointer-events: auto; /* Habilita los clics en el iframe */
 }
